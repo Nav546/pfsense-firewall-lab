@@ -54,9 +54,6 @@ SSH and Telnet are remote-login protocols that attackers commonly target, so man
 
 **Evidence**
 
-![Firewall log showing blocked SSH attempts](screenshots/01-firewall-log-ssh-blocked.png)
-![LAN rule order](screenshots/02-lan-rules-order.png)
-![nc test: port 22 times out, 443 succeeds](screenshots/03-nc-port-test.png)
 
 Test from the client VM:
 
@@ -102,10 +99,7 @@ A second network, `172.16.17.0/24`, sits behind a router VM. pfSense does not ow
 
 Before the route, a ping from the client to `172.16.17.1` fails. After the route, it succeeds, and traceroute shows the path through pfSense.
 
-![Before the route: 100% loss](screenshots/07-route-before.png)
-![Static route list](screenshots/08-static-route.png)
 ![After the route: replies](screenshots/09-route-after.png)
-![Traceroute: pfSense, then the router](screenshots/10-traceroute.png)
 ![pfSense routing table](screenshots/11-pfsense-route-table.png)
 
 ```
